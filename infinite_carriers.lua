@@ -3,24 +3,24 @@ SPAWN_TYPE = Settlers.CARRIER
 SPAWN_TARGET = 20
 SPAWN_RADIUS = 60
 
-P3_X = 493
-P3_Y = 231
+P3_X = 467
+P3_Y = 250
 P3_lastMinute = -1
 
-P4_X = 670
-P4_Y = 446
+P4_X = 626
+P4_Y = 472
 P4_lastMinute = -1
 
-P5_X = 625
-P5_Y = 644
+P5_X = 582
+P5_Y = 593
 P5_lastMinute = -1
 
-P6_X = 538
-P6_Y = 687
+P6_X = 486
+P6_Y = 658
 P6_lastMinute = -1
 
-P7_X = 233
-P7_Y = 474
+P7_X = 252
+P7_Y = 503
 P7_lastMinute = -1
 
 function topUpCarriersP3()

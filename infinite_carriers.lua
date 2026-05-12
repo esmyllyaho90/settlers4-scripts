@@ -1,36 +1,44 @@
 BED_FLOOD = 5000
 SPAWN_TYPE = Settlers.CARRIER
 SPAWN_TARGET = 20
-SPAWN_RADIUS = 60
+SPAWN_RADIUS = 30
 SWORD_TYPE = Goods.SWORD
 SWORD_TARGET = 20
 SWORD_RADIUS = 5
-SWORD_OFFSET_X = 3
-SWORD_OFFSET_Y = 0
 
 P3_X = 467
 P3_Y = 250
 P3_lastMinute = -1
+P3_sword_X = 514
+P3_sword_Y = 329
 P3_swords_lastMinute = -1
 
 P4_X = 626
 P4_Y = 472
 P4_lastMinute = -1
+P4_sword_X = 560
+P4_sword_Y = 460
 P4_swords_lastMinute = -1
 
 P5_X = 582
 P5_Y = 593
 P5_lastMinute = -1
+P5_sword_X = 551
+P5_sword_Y = 518
 P5_swords_lastMinute = -1
 
 P6_X = 486
 P6_Y = 658
 P6_lastMinute = -1
+P6_sword_X = 521
+P6_sword_Y = 665
 P6_swords_lastMinute = -1
 
 P7_X = 252
 P7_Y = 503
 P7_lastMinute = -1
+P7_sword_X = 298
+P7_sword_Y = 538
 P7_swords_lastMinute = -1
 
 function topUpCarriersP3()
@@ -92,9 +100,9 @@ function topUpSwordsP3()
   local currentMinute = Game.Time()
   if P3_swords_lastMinute ~= currentMinute then
     P3_swords_lastMinute = currentMinute
-    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P3_X + SWORD_OFFSET_X, P3_Y + SWORD_OFFSET_Y, SWORD_RADIUS)
+    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P3_sword_X, P3_sword_Y, SWORD_RADIUS)
     if swords < SWORD_TARGET then
-      SU.Goods.AddPileEx(P3_X + SWORD_OFFSET_X, P3_Y + SWORD_OFFSET_Y, SWORD_TYPE, SWORD_TARGET - swords)
+      SU.Goods.AddPileEx(P3_sword_X, P3_sword_Y, SWORD_TYPE, SWORD_TARGET - swords)
     end
   end
 end
@@ -103,9 +111,9 @@ function topUpSwordsP4()
   local currentMinute = Game.Time()
   if P4_swords_lastMinute ~= currentMinute then
     P4_swords_lastMinute = currentMinute
-    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P4_X + SWORD_OFFSET_X, P4_Y + SWORD_OFFSET_Y, SWORD_RADIUS)
+    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P4_sword_X, P4_sword_Y, SWORD_RADIUS)
     if swords < SWORD_TARGET then
-      SU.Goods.AddPileEx(P4_X + SWORD_OFFSET_X, P4_Y + SWORD_OFFSET_Y, SWORD_TYPE, SWORD_TARGET - swords)
+      SU.Goods.AddPileEx(P4_sword_X, P4_sword_Y, SWORD_TYPE, SWORD_TARGET - swords)
     end
   end
 end
@@ -114,9 +122,9 @@ function topUpSwordsP5()
   local currentMinute = Game.Time()
   if P5_swords_lastMinute ~= currentMinute then
     P5_swords_lastMinute = currentMinute
-    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P5_X + SWORD_OFFSET_X, P5_Y + SWORD_OFFSET_Y, SWORD_RADIUS)
+    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P5_sword_X, P5_sword_Y, SWORD_RADIUS)
     if swords < SWORD_TARGET then
-      SU.Goods.AddPileEx(P5_X + SWORD_OFFSET_X, P5_Y + SWORD_OFFSET_Y, SWORD_TYPE, SWORD_TARGET - swords)
+      SU.Goods.AddPileEx(P5_sword_X, P5_sword_Y, SWORD_TYPE, SWORD_TARGET - swords)
     end
   end
 end
@@ -125,9 +133,9 @@ function topUpSwordsP6()
   local currentMinute = Game.Time()
   if P6_swords_lastMinute ~= currentMinute then
     P6_swords_lastMinute = currentMinute
-    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P6_X + SWORD_OFFSET_X, P6_Y + SWORD_OFFSET_Y, SWORD_RADIUS)
+    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P6_sword_X, P6_sword_Y, SWORD_RADIUS)
     if swords < SWORD_TARGET then
-      SU.Goods.AddPileEx(P6_X + SWORD_OFFSET_X, P6_Y + SWORD_OFFSET_Y, SWORD_TYPE, SWORD_TARGET - swords)
+      SU.Goods.AddPileEx(P6_sword_X, P6_sword_Y, SWORD_TYPE, SWORD_TARGET - swords)
     end
   end
 end
@@ -136,9 +144,9 @@ function topUpSwordsP7()
   local currentMinute = Game.Time()
   if P7_swords_lastMinute ~= currentMinute then
     P7_swords_lastMinute = currentMinute
-    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P7_X + SWORD_OFFSET_X, P7_Y + SWORD_OFFSET_Y, SWORD_RADIUS)
+    local swords = Goods.GetAmountInArea(-1, SWORD_TYPE, P7_sword_X, P7_sword_Y, SWORD_RADIUS)
     if swords < SWORD_TARGET then
-      SU.Goods.AddPileEx(P7_X + SWORD_OFFSET_X, P7_Y + SWORD_OFFSET_Y, SWORD_TYPE, SWORD_TARGET - swords)
+      SU.Goods.AddPileEx(P7_sword_X, P7_sword_Y, SWORD_TYPE, SWORD_TARGET - swords)
     end
   end
 end

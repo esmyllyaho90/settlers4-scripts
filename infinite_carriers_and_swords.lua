@@ -41,62 +41,62 @@ P7_sword_X = 298
 P7_sword_Y = 538
 P7_swords_lastMinute = -1
 
-function topUpCarriersP3()
+function infiniteCarriersP3()
   local currentMinute = Game.Time()
   if P3_lastMinute ~= currentMinute then
     P3_lastMinute = currentMinute
     local numAdded = SU.Settlers.AddSettlersIfNeeded(P3_X, P3_Y, 3, SPAWN_TYPE, SPAWN_TARGET, SPAWN_RADIUS)
     if numAdded == -1 then
-      unrequest_event(topUpCarriersP3, Events.FIVE_TICKS)
+      unrequest_event(infiniteCarriersP3, Events.FIVE_TICKS)
     end
   end
 end
 
-function topUpCarriersP4()
+function infiniteCarriersP4()
   local currentMinute = Game.Time()
   if P4_lastMinute ~= currentMinute then
     P4_lastMinute = currentMinute
     local numAdded = SU.Settlers.AddSettlersIfNeeded(P4_X, P4_Y, 4, SPAWN_TYPE, SPAWN_TARGET, SPAWN_RADIUS)
     if numAdded == -1 then
-      unrequest_event(topUpCarriersP4, Events.FIVE_TICKS)
+      unrequest_event(infiniteCarriersP4, Events.FIVE_TICKS)
     end
   end
 end
 
-function topUpCarriersP5()
+function infiniteCarriersP5()
   local currentMinute = Game.Time()
   if P5_lastMinute ~= currentMinute then
     P5_lastMinute = currentMinute
     local numAdded = SU.Settlers.AddSettlersIfNeeded(P5_X, P5_Y, 5, SPAWN_TYPE, SPAWN_TARGET, SPAWN_RADIUS)
     if numAdded == -1 then
-      unrequest_event(topUpCarriersP5, Events.FIVE_TICKS)
+      unrequest_event(infiniteCarriersP5, Events.FIVE_TICKS)
     end
   end
 end
 
-function topUpCarriersP6()
+function infiniteCarriersP6()
   local currentMinute = Game.Time()
   if P6_lastMinute ~= currentMinute then
     P6_lastMinute = currentMinute
     local numAdded = SU.Settlers.AddSettlersIfNeeded(P6_X, P6_Y, 6, SPAWN_TYPE, SPAWN_TARGET, SPAWN_RADIUS)
     if numAdded == -1 then
-      unrequest_event(topUpCarriersP6, Events.FIVE_TICKS)
+      unrequest_event(infiniteCarriersP6, Events.FIVE_TICKS)
     end
   end
 end
 
-function topUpCarriersP7()
+function infiniteCarriersP7()
   local currentMinute = Game.Time()
   if P7_lastMinute ~= currentMinute then
     P7_lastMinute = currentMinute
     local numAdded = SU.Settlers.AddSettlersIfNeeded(P7_X, P7_Y, 7, SPAWN_TYPE, SPAWN_TARGET, SPAWN_RADIUS)
     if numAdded == -1 then
-      unrequest_event(topUpCarriersP7, Events.FIVE_TICKS)
+      unrequest_event(infiniteCarriersP7, Events.FIVE_TICKS)
     end
   end
 end
 
-function topUpSwordsP3()
+function infiniteSwordsP3()
   local currentMinute = Game.Time()
   if P3_swords_lastMinute ~= currentMinute then
     P3_swords_lastMinute = currentMinute
@@ -107,7 +107,7 @@ function topUpSwordsP3()
   end
 end
 
-function topUpSwordsP4()
+function infiniteSwordsP4()
   local currentMinute = Game.Time()
   if P4_swords_lastMinute ~= currentMinute then
     P4_swords_lastMinute = currentMinute
@@ -118,7 +118,7 @@ function topUpSwordsP4()
   end
 end
 
-function topUpSwordsP5()
+function infiniteSwordsP5()
   local currentMinute = Game.Time()
   if P5_swords_lastMinute ~= currentMinute then
     P5_swords_lastMinute = currentMinute
@@ -129,7 +129,7 @@ function topUpSwordsP5()
   end
 end
 
-function topUpSwordsP6()
+function infiniteSwordsP6()
   local currentMinute = Game.Time()
   if P6_swords_lastMinute ~= currentMinute then
     P6_swords_lastMinute = currentMinute
@@ -140,7 +140,7 @@ function topUpSwordsP6()
   end
 end
 
-function topUpSwordsP7()
+function infiniteSwordsP7()
   local currentMinute = Game.Time()
   if P7_swords_lastMinute ~= currentMinute then
     P7_swords_lastMinute = currentMinute
@@ -160,28 +160,28 @@ function new_game()
   SU.Game.AddBeds(6, BED_FLOOD)
   SU.Game.AddBeds(7, BED_FLOOD)
   SU.Game.AddBeds(8, BED_FLOOD)
-  request_event(topUpCarriersP3, Events.FIVE_TICKS)
-  request_event(topUpCarriersP4, Events.FIVE_TICKS)
-  request_event(topUpCarriersP5, Events.FIVE_TICKS)
-  request_event(topUpCarriersP6, Events.FIVE_TICKS)
-  request_event(topUpCarriersP7, Events.FIVE_TICKS)
-  request_event(topUpSwordsP3, Events.FIVE_TICKS)
-  request_event(topUpSwordsP4, Events.FIVE_TICKS)
-  request_event(topUpSwordsP5, Events.FIVE_TICKS)
-  request_event(topUpSwordsP6, Events.FIVE_TICKS)
-  request_event(topUpSwordsP7, Events.FIVE_TICKS)
+  request_event(infiniteCarriersP3, Events.FIVE_TICKS)
+  request_event(infiniteCarriersP4, Events.FIVE_TICKS)
+  request_event(infiniteCarriersP5, Events.FIVE_TICKS)
+  request_event(infiniteCarriersP6, Events.FIVE_TICKS)
+  request_event(infiniteCarriersP7, Events.FIVE_TICKS)
+  request_event(infiniteSwordsP3, Events.FIVE_TICKS)
+  request_event(infiniteSwordsP4, Events.FIVE_TICKS)
+  request_event(infiniteSwordsP5, Events.FIVE_TICKS)
+  request_event(infiniteSwordsP6, Events.FIVE_TICKS)
+  request_event(infiniteSwordsP7, Events.FIVE_TICKS)
   dbg.stm("Script active")
 end
 
 function register_functions()
-  reg_func(topUpCarriersP3)
-  reg_func(topUpCarriersP4)
-  reg_func(topUpCarriersP5)
-  reg_func(topUpCarriersP6)
-  reg_func(topUpCarriersP7)
-  reg_func(topUpSwordsP3)
-  reg_func(topUpSwordsP4)
-  reg_func(topUpSwordsP5)
-  reg_func(topUpSwordsP6)
-  reg_func(topUpSwordsP7)
+  reg_func(infiniteCarriersP3)
+  reg_func(infiniteCarriersP4)
+  reg_func(infiniteCarriersP5)
+  reg_func(infiniteCarriersP6)
+  reg_func(infiniteCarriersP7)
+  reg_func(infiniteSwordsP3)
+  reg_func(infiniteSwordsP4)
+  reg_func(infiniteSwordsP5)
+  reg_func(infiniteSwordsP6)
+  reg_func(infiniteSwordsP7)
 end

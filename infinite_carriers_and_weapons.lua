@@ -115,6 +115,10 @@ function infiniteCarriersP7()
 end
 
 function infiniteSwordsP3()
+  if Game.HasPlayerLost(3) then
+    unrequest_event(infiniteSwordsP3, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P3_swords_lastMinute ~= currentMinute then
     P3_swords_lastMinute = currentMinute
@@ -126,6 +130,10 @@ function infiniteSwordsP3()
 end
 
 function infiniteSwordsP4()
+  if Game.HasPlayerLost(4) then
+    unrequest_event(infiniteSwordsP4, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P4_swords_lastMinute ~= currentMinute then
     P4_swords_lastMinute = currentMinute
@@ -137,6 +145,10 @@ function infiniteSwordsP4()
 end
 
 function infiniteSwordsP5()
+  if Game.HasPlayerLost(5) then
+    unrequest_event(infiniteSwordsP5, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P5_swords_lastMinute ~= currentMinute then
     P5_swords_lastMinute = currentMinute
@@ -148,6 +160,10 @@ function infiniteSwordsP5()
 end
 
 function infiniteSwordsP6()
+  if Game.HasPlayerLost(6) then
+    unrequest_event(infiniteSwordsP6, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P6_swords_lastMinute ~= currentMinute then
     P6_swords_lastMinute = currentMinute
@@ -159,6 +175,10 @@ function infiniteSwordsP6()
 end
 
 function infiniteSwordsP7()
+  if Game.HasPlayerLost(7) then
+    unrequest_event(infiniteSwordsP7, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P7_swords_lastMinute ~= currentMinute then
     P7_swords_lastMinute = currentMinute
@@ -170,6 +190,10 @@ function infiniteSwordsP7()
 end
 
 function infiniteBowsP3()
+  if Game.HasPlayerLost(3) then
+    unrequest_event(infiniteBowsP3, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P3_bows_lastMinute ~= currentMinute then
     P3_bows_lastMinute = currentMinute
@@ -181,6 +205,10 @@ function infiniteBowsP3()
 end
 
 function infiniteBowsP4()
+  if Game.HasPlayerLost(4) then
+    unrequest_event(infiniteBowsP4, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P4_bows_lastMinute ~= currentMinute then
     P4_bows_lastMinute = currentMinute
@@ -192,6 +220,10 @@ function infiniteBowsP4()
 end
 
 function infiniteBowsP5()
+  if Game.HasPlayerLost(5) then
+    unrequest_event(infiniteBowsP5, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P5_bows_lastMinute ~= currentMinute then
     P5_bows_lastMinute = currentMinute
@@ -203,6 +235,10 @@ function infiniteBowsP5()
 end
 
 function infiniteBowsP6()
+  if Game.HasPlayerLost(6) then
+    unrequest_event(infiniteBowsP6, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P6_bows_lastMinute ~= currentMinute then
     P6_bows_lastMinute = currentMinute
@@ -214,6 +250,10 @@ function infiniteBowsP6()
 end
 
 function infiniteBowsP7()
+  if Game.HasPlayerLost(7) then
+    unrequest_event(infiniteBowsP7, Events.FIVE_TICKS)
+    return
+  end
   local currentMinute = Game.Time()
   if P7_bows_lastMinute ~= currentMinute then
     P7_bows_lastMinute = currentMinute

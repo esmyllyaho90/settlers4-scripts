@@ -1,44 +1,44 @@
 BED_FLOOD = 5000
 SPAWN_TYPE = Settlers.CARRIER
-SPAWN_TARGET = 30
+SPAWN_TARGET = 80
 SPAWN_RADIUS = 30
 SWORD_TYPE = Goods.SWORD
-SWORD_TARGET = 30
+SWORD_TARGET = 40
 SWORD_RADIUS = 5
 
-P3_X = 467
-P3_Y = 250
+P3_X = 440
+P3_Y = 219
 P3_lastMinute = -1
-P3_sword_X = 514
-P3_sword_Y = 329
+P3_sword_X = 412
+P3_sword_Y = 178
 P3_swords_lastMinute = -1
 
-P4_X = 626
-P4_Y = 472
+P4_X = 644
+P4_Y = 432
 P4_lastMinute = -1
-P4_sword_X = 560
-P4_sword_Y = 460
+P4_sword_X = 640
+P4_sword_Y = 406
 P4_swords_lastMinute = -1
 
-P5_X = 582
-P5_Y = 593
+P5_X = 593
+P5_Y = 622
 P5_lastMinute = -1
-P5_sword_X = 551
-P5_sword_Y = 518
+P5_sword_X = 633
+P5_sword_Y = 649
 P5_swords_lastMinute = -1
 
-P6_X = 486
-P6_Y = 658
+P6_X = 495
+P6_Y = 687
 P6_lastMinute = -1
-P6_sword_X = 521
-P6_sword_Y = 665
+P6_sword_X = 545
+P6_sword_Y = 712
 P6_swords_lastMinute = -1
 
-P7_X = 252
-P7_Y = 503
+P7_X = 301
+P7_Y = 529
 P7_lastMinute = -1
-P7_sword_X = 298
-P7_sword_Y = 538
+P7_sword_X = 301
+P7_sword_Y = 570
 P7_swords_lastMinute = -1
 
 function infiniteCarriersP3()
